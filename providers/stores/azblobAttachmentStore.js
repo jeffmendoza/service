@@ -4,7 +4,7 @@
 const azure = require('azure-storage')
 const { promisify } = require('util')
 const Bottleneck = require('bottleneck').default
-const limiter = new Bottleneck({ maxConcurrent: 1000 })
+const limiter = new Bottleneck({ maxConcurrent: 10000 })
 
 class AzBlobAttachmentStore {
   constructor(options) {
